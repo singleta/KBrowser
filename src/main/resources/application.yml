@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:6667
+      topic:
+        name: batch-processor-input
+      group-id: com.santanderuk.ccm.vault-cm-batch-processor
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      session.timeout.ms: 20000
+      heartbeat.interval.ms: 2000
+      request.timeout: 3000
+      max.poll.records: 150
+      max.poll.interval: 2500000
+
+
